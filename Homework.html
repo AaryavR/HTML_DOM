@@ -1,0 +1,41 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Objects and Arrays</title>
+    </head>
+    <body>
+
+        <h2>Objects and Arrays Example</h2>
+        <button onclick="displayObject()">Show Object</button>
+        <button onclick="displayArray()">Show Array</button>
+        <button onclick="popAndShowArray()">Pop & Show Array</button>
+        <p id="output"></p>
+
+        <script>
+
+            let person = {
+                name: "John",
+                age: 25,
+                city: "Dubai"
+            };
+
+            let fruits = ["Apple", "Banana", "Cherry", "Mango"];
+
+            function displayObject() {
+                let output = `Name: ${person.name}, Age: ${person.age}, City: ${person.city}`;
+                document.getElementById("output").innerText = output;
+            }
+
+            function displayArray() {
+                document.getElementById("output").innerText = "Fruits: " + fruits.join(", ");
+            }
+
+            function popAndShowArray() {
+                fruits.pop();
+                document.getElementById("output").innerText = "Updated Fruits: " + fruits.join(", ");
+            }
+        </script>
+
+    </body>
+</html>
